@@ -5,10 +5,21 @@ import { Inicio } from './pages/Inicio';
 import { Explorar } from './pages/Explorar';
 import { Beleza } from './pages/Beleza';
 import { PerfilMarina } from './pages/PerfilMarina';
+import { Agendamento } from './pages/agendamento'; 
 import { Opcoes } from './pages/Opcoes';
+import { Confirmacao }  from './pages/Confirmacao';
+import { Favoritos } from './pages/Favoritos';
+import { Mensagem } from './pages/Mensagem';
+import { PerfilUsuario} from './pages/PerfilUsuario';
+import {Descobrir} from './pages/Descobrir';
+import {RecuperarSolicitar} from './pages/RecuperarSolicitar';
+import {RecuperarEnviado} from './pages/RecuperarEnviado';
+import {RecuperarNovaSenha} from './pages/RecuperarNovaSenha';
+
 
 function App() {
-  const [telaAtiva, setTelaAtiva] = useState('explorar');
+  // Define a tela inicial (pode mudar para 'inicio' quando finalizar os testes)
+  const [telaAtiva, setTelaAtiva] = useState('inicio');
 
   return (
     <div>
@@ -39,6 +50,43 @@ function App() {
       {telaAtiva === 'opcoes' && (
         <Opcoes irParaTela={setTelaAtiva} />
       )}
+
+      {telaAtiva === 'agendamento' && (
+        <Agendamento irParaTela={setTelaAtiva} />
+      )}
+
+      {telaAtiva === 'confirmaçao' && (
+        <Confirmacao irParaTela={setTelaAtiva} />
+      )}
+
+      {telaAtiva === 'favoritos' && (
+        <Favoritos irParaTela={setTelaAtiva} />
+      )}
+
+      {telaAtiva === 'mensagem' && (
+        <Mensagem irParaTela={setTelaAtiva} />
+      )} 
+
+      {telaAtiva === 'perfil usuario' && (
+        <PerfilUsuario irParaTela={setTelaAtiva} />
+      )} 
+
+      {telaAtiva === 'descobrir' && (
+        <Descobrir irParaTela={setTelaAtiva} />
+      )}
+
+      {telaAtiva === 'recuperar' && (
+        <RecuperarSolicitar irParaLogin={ setTelaAtiva} />
+      )}
+
+      {telaAtiva === 'recuperarEnviado' && (
+        <RecuperarEnviado irParaTela={setTelaAtiva} />
+      )}
+      
+      {telaAtiva === 'recuperarNovaSenha' && (
+        <RecuperarNovaSenha irParaTela={setTelaAtiva} />
+      )}
+
     </div>
   );
 }

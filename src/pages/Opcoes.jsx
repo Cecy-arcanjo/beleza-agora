@@ -35,7 +35,7 @@ export function Opcoes({ irParaTela }) {
 
   return (
     <div className="opcoes-container">
-      {/* NAVBAR */}
+     
       <header className="navbar-opcoes">
         <div className="logo-box" onClick={() => irParaTela && irParaTela('inicio')}>
           <div className="logo-badge-opcoes">B</div>
@@ -66,9 +66,9 @@ export function Opcoes({ irParaTela }) {
         </div>
       </header>
 
-      {/* CONTEÚDO PRINCIPAL */}
+     
       <main className="conteudo-opcoes">
-        {/* COLUNA ESQUERDA: GALERIA E PROFISSIONAL */}
+        
         <div className="coluna-galeria">
           <div className="foto-principal-wrapper">
             <img src={fotos[imagemAtiva]} alt="Serviço de maquiagem" />
@@ -87,7 +87,7 @@ export function Opcoes({ irParaTela }) {
             ))}
           </div>
 
-          {/* CARD INFERIOR DO PROFISSIONAL (Clica para ver o perfil) */}
+       
           <div 
             className="card-profissional-resumo"
             onClick={() => irParaTela && irParaTela('perfil')}
@@ -122,8 +122,8 @@ export function Opcoes({ irParaTela }) {
           <h2 className="titulo-servico">Maquiagem social completa</h2>
 
           <div className="meta-info-servico">
-            <span className="meta-item">⏱ 1h30 de duração</span>
-            <span className="meta-item">📍 Estúdio ou domicílio</span>
+            <span className="meta-item"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke=" #B28A42" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-clock-3 preview-icon"><circle cx="12" cy="12" r="10"/><path d="M12 6v6h4"/></svg> 1h30 de duração</span>
+            <span className="meta-item"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke=" #B28A42" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-map-pin preview-icon"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg> Estúdio ou domicílio</span>
           </div>
 
           <div className="descricao-servico-box">
@@ -174,7 +174,7 @@ export function Opcoes({ irParaTela }) {
             </div>
 
             <button className="btn-escolher-data">
-              📅 Escolher data e horário
+               Escolher data e horário
             </button>
           </div>
         </div>

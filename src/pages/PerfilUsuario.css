@@ -1,0 +1,232 @@
+/* --- Estilos Gerais --- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #F8F9FA;
+  color: #2D2D2D;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.content-container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+/* --- Cabeçalho --- */
+.header {
+  background-color: #ffffff;
+  border-bottom: 1px solid #f0f0f0;
+  padding: 16px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: #8A1538;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.logo-title {
+  font-weight: bold;
+  color: #8A1538;
+  font-size: 18px;
+  line-height: 1.2;
+}
+
+.logo-subtitle {
+  font-size: 10px;
+  color: #888888;
+  letter-spacing: 0.5px;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 32px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #555555;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.nav-link.active {
+  color: #8A1538;
+  font-weight: 600;
+  border-bottom: 2px solid #8A1538;
+  padding-bottom: 4px;
+}
+
+/* --- Cartões e Layout --- */
+.card-base {
+  background-color: #ffffff;
+  border-radius: 16px;
+  border: 1px solid #f0f0f0;
+  padding: 20px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.stat-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 16px;
+  border: 1px solid #f0f0f0;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.stat-icon {
+  background-color: #FFF0F3;
+  padding: 10px;
+  border-radius: 12px;
+  color: #8A1538;
+}
+
+.main-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+@media (min-width: 992px) {
+  .main-grid {
+    grid-template-columns: 350px 1fr;
+  }
+}
+
+/* --- Menu Lateral --- */
+.sidebar-profile {
+  text-align: center;
+}
+
+.profile-avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto 12px;
+  border: 2px solid #FFE4E6;
+}
+
+.badge-verified {
+  background-color: #EAF7EE;
+  color: #28A745;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 4px 12px;
+  border-radius: 12px;
+  display: inline-block;
+}
+
+.menu-item {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: none;
+  background: transparent;
+  color: #555555;
+  font-size: 13px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.menu-item:hover {
+  background-color: #f9f9f9;
+}
+
+.menu-item.active {
+  background-color: #FFF0F3;
+  color: #8A1538;
+  font-weight: 600;
+}
+
+/* --- Agendamentos --- */
+.appointment-card {
+  background-color: #F9FAFB;
+  border-radius: 12px;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid #f0f0f0;
+  margin-bottom: 12px;
+}
+
+.date-box {
+  background-color: #8A1538;
+  color: #ffffff;
+  border-radius: 12px;
+  padding: 8px;
+  min-width: 50px;
+  text-align: center;
+}
+
+.badge-status-confirmed {
+  background-color: #EAF7EE;
+  color: #28A745;
+  font-size: 10px;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+.badge-status-pending {
+  background-color: #FFF3CD;
+  color: #856404;
+  font-size: 10px;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+/* --- Banner de Impacto --- */
+.impact-banner {
+  background-color: #8A1538;
+  color: #ffffff;
+  border-radius: 16px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.impact-badge {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(8px);
+  padding: 8px 12px;
+  border-radius: 10px;
+  font-size: 12px;
+  font-weight: bold;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}

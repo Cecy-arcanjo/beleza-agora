@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import './Login.css';
 
-export function Login({ irParaCadastro }) {
+// 1. Adicionada a prop irParaRecSenha
+export function Login({ irParaCadastro, irParaRecSenha }) {
     
     const [mostrarSenha, setMostrarSenha] = useState(false);
 
     return (
         <div className="container-tela">
-          
             <header className="cabecalho-topo">
                 <div className="logotipo-marca">
                     <div className="icone-logo">B</div>
@@ -33,7 +33,6 @@ export function Login({ irParaCadastro }) {
 
                 <section className="bloco-formulario">
                     <article className="cartao-caixa">
-                        
                         <nav className="menu-abas">
                             <button className="botao-aba" type="button" onClick={irParaCadastro}>Criar conta</button>
                             <button className="botao-aba ativo" type="button">Entrar</button>
@@ -45,7 +44,6 @@ export function Login({ irParaCadastro }) {
                         </header>
 
                         <form onSubmit={(e) => e.preventDefault()}>
-                            
                             <article className="campo-texto">
                                 <label htmlFor="email">E-mail ou celular</label>
                                 <section className="caixa-input">
@@ -92,7 +90,15 @@ export function Login({ irParaCadastro }) {
                                         onChange={(e) => setMostrarSenha(e.target.checked)} 
                                     /> Visualizar senha.
                                 </label>
-                                <a href="#esqueci" className="link-esqueci">Esqueci minha senha</a>
+                                {/* 2. Link configurado para redirecionar */}
+                                <button 
+                                  type="button" 
+                                  className="link-esqueci" 
+                                  onClick={irParaRecSenha}
+                                  style={{ background: 'none', border: 'none', cursor: 'pointer' }}
+                                >
+                                  Esqueci minha senha
+                                </button>
                             </section>
 
                             <button type="submit" className="botao-enviar">Entrar</button>
