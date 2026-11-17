@@ -20,7 +20,7 @@ export function Agendamento({ irParaTela }) {
 
   return (
     <div className="container-agendamento-pagina">
-     
+
       <header className="cabecalho-topo">
         <div className="logotipo-marca">
           <div className="icone-logo">B</div>
@@ -32,9 +32,9 @@ export function Agendamento({ irParaTela }) {
 
         <nav className="menu-navegacao">
           <a href="#inicio" className="item-nav" onClick={(e) => { e.preventDefault(); irParaTela && irParaTela('inicio'); }}>Início</a>
-          <a href="#explorar" className="item-nav ativo" onClick={(e) => { e.preventDefault(); irParaTela && irParaTela('explorar'); }}>Explorar</a>
-          <a href="#favoritos" className="item-nav">Favoritos</a>
-          <a href="#mensagens" className="item-nav">Mensagens</a>
+          <a href="#explorar" className="item-nav" onClick={(e) => { e.preventDefault(); irParaTela && irParaTela('explorar'); }}>Explorar</a>
+          <a href="#favoritos" className="item-nav" onClick={(e) => { e.preventDefault(); irParaTela && irParaTela('favoritos'); }}>Favoritos</a>
+          <a href="#mensagem" className="item-nav" onClick={(e) => { e.preventDefault(); irParaTela && irParaTela('mensagem'); }}>Mensagens</a>
         </nav>
 
         <div className="perfil-topo">
@@ -47,7 +47,7 @@ export function Agendamento({ irParaTela }) {
         </div>
       </header>
 
-    
+
       <main className="conteudo-principal-agendamento">
         <div className="titulo-secao-agendamento">
           <h1>Quando você prefere?</h1>
@@ -55,8 +55,8 @@ export function Agendamento({ irParaTela }) {
         </div>
 
         <div className="grid-painel-agendamento">
-          
-        
+
+
           <div className="card-calendario">
             <div className="topo-mes">
               <button className="btn-seta-mes">〈</button>
@@ -86,7 +86,7 @@ export function Agendamento({ irParaTela }) {
             </div>
           </div>
 
-         
+
           <div className="card-horarios">
             <div className="cabecalho-horarios-dia">
               <h3>Quarta-feira, 14 de outubro</h3>
@@ -98,8 +98,8 @@ export function Agendamento({ irParaTela }) {
               <span className="periodo-titulo">Manhã</span>
               <div className="grade-horarios">
                 {horariosManha.map((hora) => (
-                  <button 
-                    key={hora} 
+                  <button
+                    key={hora}
                     className={`btn-horario ${horarioSelecionado === hora ? 'ativo' : ''}`}
                     onClick={() => setHorarioSelecionado(hora)}
                   >
@@ -113,8 +113,8 @@ export function Agendamento({ irParaTela }) {
               <span className="periodo-titulo">Tarde</span>
               <div className="grade-horarios">
                 {horariosTarde.map((hora) => (
-                  <button 
-                    key={hora} 
+                  <button
+                    key={hora}
                     className={`btn-horario ${horarioSelecionado === hora ? 'ativo' : ''}`}
                     onClick={() => setHorarioSelecionado(hora)}
                   >
@@ -128,8 +128,8 @@ export function Agendamento({ irParaTela }) {
               <span className="periodo-titulo">Noite</span>
               <div className="grade-horarios">
                 {horariosNoite.map((hora) => (
-                  <button 
-                    key={hora} 
+                  <button
+                    key={hora}
                     className={`btn-horario ${horarioSelecionado === hora ? 'ativo' : ''}`}
                     onClick={() => setHorarioSelecionado(hora)}
                   >
@@ -149,7 +149,7 @@ export function Agendamento({ irParaTela }) {
             <span className="sub-resumo">SEU AGENDAMENTO</span>
             <h2>Maquiagem social completa</h2>
             <p className="com-profissional">com Marina Lima</p>
-            
+
             <div className="detalhes-data-hora">
               <strong>14 out · {horarioSelecionado}</strong>
               <span>1h30 · no estúdio</span>
@@ -157,10 +157,11 @@ export function Agendamento({ irParaTela }) {
 
             <div className="rodape-resumo">
               <span className="preco-final">R$ 90</span>
-              <button className="btn-continuar">➔ Continuar</button>
+              <button className="btn-continuar" onClick={() => irParaTela && irParaTela('confirmacao')}>
+                ➔ Continuar
+              </button>
             </div>
           </div>
-
         </div>
       </main>
     </div>
